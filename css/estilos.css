@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --titlecolor: rgb(255, 195, 116);
+}
+
+body {
+    font-family: 'Franklin Gothic Medium';
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    margin: 20px 20px 20px 20px;
+    height: 50px;
+}
+
+.header h1 {
+    font-family: 'Comic Sans MS';
+    color: var(--titlecolor);
+    animation-name: titulo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.navegador {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.navegador ul {
+    display: flex;
+    margin-right: 40px;
+}
+
+.navegador li {
+    margin-left: 20px;
+}
+
+.navegador a {
+    font-size: 19px;
+    line-height: 35px;
+    color: rgb(236, 236, 236);
+}
+
+.navegador a:hover {
+    border-bottom: 2px solid white;
+}
+
+.title {
+    color: var(--titlecolor);
+    font-size: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    text-align: center;
+    text-decoration: overline;
+}
+
+.anuncio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.portada img {
+    width: 100%;
+    object-fit: cover;
+    height: 600px;
+    border-bottom: 5px solid rgb(255, 195, 116);
+}
+
+.portada p {
+    width: 930px;
+    position: absolute;
+    color: white;
+    font-size: 55px;
+    margin-top: 275px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-name: anuncio;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.caja {
+    margin-top: 30px;
+    width: 700px;
+}
+
+.info {
+    display: flex;
+    margin: 10px 10px 10px 10px;
+}
+
+.info img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.galeria {
+    margin-top: 30px;
+}
+
+.fotos {
+    margin-top: 30px;
+}
+
+.fotos ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.fotos li {
+    padding: 0px 2px 0px 2px;
+}
+
+.fotos img {
+    object-fit: cover;
+    width: 330px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.ubicacion iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.redes {
+    margin-top: 30px;
+    height: 200px;
+}
+
+
+
+.red {
+    margin: 10px 30px 10px 10px;
+    display: flex;
+    background-color: var(--titlecolor);
+    border-radius: 20px;
+}
+
+.red:hover{
+    border-bottom: 2px solid grey;
+}
+
+.red img {
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 75px;
+    height: 75px;
+}
+
+.red p {
+    line-height: 100px;
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.flex-container-redes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 100px;
+    background-color: var(--titlecolor);
+    color: rgb(116, 116, 116);
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.links a {
+    width: 200px;
+    font-size: 16px;
+    color: rgb(38, 38, 38);
+    padding-top: 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.copy {
+    color: rgb(38, 38, 38);
+    margin-top: 15px;
+    text-align: center;
+}
+
+.responsive-menu {
+    display: none;
+}
+
+@keyframes titulo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navegador ul {
+        position: fixed;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
